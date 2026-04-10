@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{ years: 5, gvCost: 599, pcoMonthly: 318, ccbMonthly: 400, tlyMonthly: 119 }">
+<html lang="en" x-data="{ years: 5, gvCost: 599, avgMonthly: 279 }">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,9 +47,9 @@
 
     <section class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-8 text-center">
-            <h2 class="text-4xl font-black uppercase tracking-tighter mb-6 text-[#3A4E5D]">Software built for <span class="text-[#C5A059]">profit margins</span>, not parish budgets.</h2>
+            <h2 class="text-4xl font-black uppercase tracking-tighter mb-6 text-[#3A4E5D]">Software built for <span class="text-[#C5A059]">church budgets</span>, not quarterly earnings reports.</h2>
             <p class="text-xl text-slate-500 leading-relaxed">
-                Most platforms charge you more the more you grow. They hold your member data and giving history hostage behind a monthly paywall. If you stop paying, you lose your history. We think your church's digital foundation shouldn't be a lifetime debt.
+                You should be rewarded for growth, not taxed for it. While most platforms hold your data hostage behind a monthly paywall, Gather Vital gives you the keys to your own house. Your digital foundation shouldn't be a lifetime debt.
             </p>
         </div>
     </section>
@@ -58,16 +58,16 @@
         <div class="bg-[#3A4E5D] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl">
             <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 border-8 border-white/5"></div>
             <div class="relative z-10">
-                <h3 class="font-black uppercase tracking-widest text-[#C5A059] mb-8 text-xs">Why We Exist</h3>
+                <h3 class="font-black uppercase tracking-widest text-[#C5A059] mb-8 text-xs">A Note From The Founder</h3>
                 <h2 class="text-3xl md:text-5xl font-black mb-10 leading-tight tracking-tighter">
-                    "Gather Vital wasn't built in a boardroom; it was built in a pastor's office."
+                    "Gather Vital wasn't built in a boardroom; it was built in the pastor's office."
                 </h2>
                 <div class="space-y-6 text-slate-200 leading-relaxed text-lg max-w-2xl">
                     <p>
                         We built this because we were tired of watching our church budget go to things it didn't need to. I didn't realize how bad it was until our finance chair told me we were spending <span class="text-white font-bold text-xl">$480 a month</span> to a company that held our data hostage. 
                     </p>
                     <p>
-                        As costs go up and the needs of our community grow, we knew something had to change. The mission of the local church is greater than the quarterly earnings of a software company.
+                        As costs go up and the needs of our community grow, we knew something had to change. The mission of the local church is greater than the needs of a software company.
                     </p>
                 </div>
             </div>
@@ -77,8 +77,8 @@
     <section class="py-24 bg-slate-50 border-y border-slate-100">
         <div class="max-w-6xl mx-auto px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-black uppercase tracking-tighter mb-4 text-[#3A4E5D]">Calculate Your <span class="text-[#C5A059]">Subscription Tax</span></h2>
-                <p class="text-slate-500 font-medium">See how much capital you are leaving on the table over the next decade.</p>
+                <h2 class="text-4xl font-black uppercase tracking-tighter mb-4 text-[#3A4E5D]">The <span class="text-[#C5A059]">Subscription Tax</span></h2>
+                <p class="text-slate-500 font-medium">The average monthly cost for the "Big 4" (Planning Center, CCB, Tithely, Breeze) is ~$279/mo for a church of 300.</p>
             </div>
             <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
                 <div class="grid lg:grid-cols-5">
@@ -94,9 +94,9 @@
                             <span class="font-black uppercase tracking-widest text-[10px] text-slate-400">Gather Vital (One-Time)</span>
                             <span class="font-black text-[#5DA399] text-2xl">$599</span>
                         </div>
-                        <div class="mt-8 p-8 bg-[#5DA399]/5 rounded-2xl border-2 border-dashed border-[#5DA399]/20 text-center">
-                            <p class="text-[10px] uppercase font-black tracking-widest text-[#3A4E5D] mb-2">Potential Kingdom Savings</p>
-                            <div x-text="'$' + (Math.round(((pcoMonthly + ccbMonthly + tlyMonthly)/3 * 12 * years) - gvCost)).toLocaleString()" class="text-6xl font-black text-[#5DA399] tracking-tighter"></div>
+                        <div class="mt-8 p-8 bg-red-50 rounded-2xl border-2 border-dashed border-red-200 text-center">
+                            <p class="text-[10px] uppercase font-black tracking-widest text-red-600 mb-2">Total Subscription Tax Lost</p>
+                            <div x-text="'$' + (Math.round((avgMonthly * 12 * years) - gvCost)).toLocaleString()" class="text-6xl font-black text-red-600 tracking-tighter"></div>
                         </div>
                     </div>
                 </div>
@@ -105,21 +105,21 @@
     </section>
 
     <section id="how-it-works" class="py-24 max-w-7xl mx-auto px-8">
-        <div class="grid md:grid-cols-3 gap-16">
-            <div class="text-center group">
+        <div class="grid md:grid-cols-3 gap-16 text-center">
+            <div class="group">
                 <div class="w-16 h-16 bg-[#3A4E5D] text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-8 transform group-hover:rotate-6 transition">01</div>
-                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">Secure the Key</h3>
-                <p class="text-slate-500 text-sm">Pay once for your lifetime license. You own the code and the data forever.</p>
+                <h3 class="font-black uppercase text-[#3A4E5D] mb-4 tracking-widest text-sm">Secure the Key</h3>
+                <p class="text-slate-500 text-sm">One-time license. You own the code and the data forever.</p>
             </div>
-            <div class="text-center group">
+            <div class="group">
                 <div class="w-16 h-16 bg-[#C5A059] text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-8 transform group-hover:-rotate-6 transition">02</div>
-                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">The Tuesday Setup</h3>
-                <p class="text-slate-500 text-sm">We provide a 4-hour 'White-Glove' window to migrate your data and brand your app.</p>
+                <h3 class="font-black uppercase text-[#3A4E5D] mb-4 tracking-widest text-sm">Tuesday Launch</h3>
+                <p class="text-slate-500 text-sm">We use a 4-hour window to migrate your data and brand your app.</p>
             </div>
-            <div class="text-center group">
+            <div class="group">
                 <div class="w-16 h-16 bg-[#5DA399] text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-8 transform group-hover:rotate-6 transition">03</div>
-                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">Mission First</h3>
-                <p class="text-slate-500 text-sm">Redirect your 'Subscription Tax' back into your neighborhood and your people.</p>
+                <h3 class="font-black uppercase text-[#3A4E5D] mb-4 tracking-widest text-sm">Mission First</h3>
+                <p class="text-slate-500 text-sm">Redirect your 'Subscription Tax' back into your people.</p>
             </div>
         </div>
     </section>
@@ -136,28 +136,28 @@
 
     <section id="pricing" class="py-24 bg-slate-900 text-white">
         <div class="max-w-6xl mx-auto px-8 text-center">
-            <h2 class="text-4xl font-black uppercase tracking-tighter mb-20">Pick Your <span class="text-[#C5A059]">Sovereignty Tier.</span></h2>
+            <h2 class="text-4xl font-black uppercase tracking-tighter mb-20">Your <span class="text-[#C5A059]">Sovereignty Tier.</span></h2>
             <div class="grid md:grid-cols-2 gap-8 items-stretch text-left">
                 <div class="bg-[#1A252D] p-12 rounded-[2rem] border border-white/5 flex flex-col">
-                    <h3 class="text-[#C5A059] font-black uppercase tracking-widest text-xs mb-2">Self-Hosted</h3>
-                    <div class="text-5xl font-black mb-8">$599 <span class="text-xs text-slate-500 uppercase">Once</span></div>
-                    <ul class="space-y-4 mb-12 flex-grow text-sm text-slate-300 font-medium">
-                        <li>✅ Full CRM, Giving, & Worship Builder</li>
+                    <h3 class="text-[#C5A059] font-black uppercase tracking-widest text-xs mb-2 text-center">Self-Hosted</h3>
+                    <div class="text-5xl font-black mb-8 text-center">$599 <span class="text-xs text-slate-500 uppercase">Once</span></div>
+                    <ul class="space-y-4 mb-12 flex-grow text-sm text-slate-300">
+                        <li>✅ Full CRM & Giving Suite</li>
                         <li>✅ Ownership of Database Keys</li>
                         <li>✅ Digital Setup Guide</li>
-                        <li>✅ Zero Monthly Fees Forever</li>
+                        <li>✅ Zero Monthly Fees</li>
                     </ul>
                     <button class="w-full py-4 border-2 border-slate-700 rounded-lg font-black uppercase text-xs tracking-widest hover:bg-white hover:text-slate-900 transition">Get Started</button>
                 </div>
                 <div class="bg-[#3A4E5D] p-12 rounded-[2rem] border-4 border-[#C5A059] relative flex flex-col scale-105 shadow-2xl">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C5A059] px-4 py-1 rounded-full text-[9px] font-black uppercase tracking-widest">The Concierge</div>
-                    <h3 class="text-white font-black uppercase tracking-widest text-xs mb-2">Tuesday White-Glove Launch</h3>
-                    <div class="text-5xl font-black mb-8">$999 <span class="text-xs text-slate-200 uppercase tracking-widest">Once</span></div>
-                    <p class="text-xs text-slate-300 mb-6 font-bold italic">Includes our 4-hour Tuesday migration window where we move your data for you.</p>
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C5A059] px-4 py-1 rounded-full text-[9px] font-black uppercase tracking-widest">Recommended</div>
+                    <h3 class="text-white font-black uppercase tracking-widest text-xs mb-2 text-center">Tuesday Concierge</h3>
+                    <div class="text-5xl font-black mb-8 text-center">$999 <span class="text-xs text-slate-200 uppercase tracking-widest">Once</span></div>
+                    <p class="text-[10px] text-center text-slate-300 mb-6 font-bold uppercase tracking-widest italic">Includes our 4-hour white-glove migration window.</p>
                     <ul class="space-y-4 mb-12 flex-grow text-sm">
                         <li>✅ Everything in Self-Hosted</li>
-                        <li>✅ <span class="font-black">We Setup Everything For You</span></li>
-                        <li>✅ Data Migration (CSV Cleanup)</li>
+                        <li>✅ We Setup Everything For You</li>
+                        <li>✅ CSV Data Migration Cleanup</li>
                         <li>✅ Branded Kiosk Configuration</li>
                     </ul>
                     <button class="w-full py-4 bg-[#C5A059] text-white rounded-lg font-black uppercase text-xs tracking-widest hover:bg-[#b08e4d] transition shadow-xl">Secure My Tuesday</button>
@@ -168,9 +168,9 @@
 
     <section class="py-24 bg-[#5DA399]/5">
         <div class="max-w-3xl mx-auto px-8 text-center">
-            <h2 class="text-4xl font-black uppercase tracking-tighter mb-8 text-[#3A4E5D]">Imagine Your <span class="text-[#5DA399]">First Free Sunday.</span></h2>
+            <h2 class="text-4xl font-black uppercase tracking-tighter mb-8 text-[#3A4E5D]">The <span class="text-[#5DA399]">First Free Sunday.</span></h2>
             <p class="text-xl text-slate-600 leading-relaxed italic">
-                No more renewal anxiety. No more vendor emails notifying you of another price hike. Just you, your team, and your community—with a mission fund that finally stays in your house. **That is what ownership feels like.**
+                Imagine no more renewal anxiety. No more vendor emails notifying you of another price hike. Just you, your team, and your community—with a mission fund that finally stays in your house. **That is what ownership feels like.**
             </p>
         </div>
     </section>
@@ -181,7 +181,7 @@
             <p class="text-slate-500 mb-8">Get the <strong>Church Data Sovereignty Checklist</strong>. Learn how to move your records without losing a single member.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                 <input type="email" placeholder="Enter your email" class="px-6 py-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#5DA399] min-w-[300px]">
-                <button class="bg-[#3A4E5D] text-white px-8 py-4 rounded-lg font-black uppercase tracking-widest text-xs hover:bg-[#1A252D] transition">Download the Guide</button>
+                <button class="bg-[#3A4E5D] text-white px-8 py-4 rounded-lg font-black uppercase tracking-widest text-xs hover:bg-[#1A252D] transition">Send Me the Guide</button>
             </div>
             <div class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-300">
                 &copy; 2026 Gather Vital | Built for the Kingdom
