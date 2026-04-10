@@ -1,124 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{ years: 5, gvCost: 599, pcoMonthly: 318, ccbMonthly: 400, tlyMonthly: 119 }">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gather Vital | Own Your Ministry</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        input[type='range']::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 24px;
-            height: 24px;
-            background: #C5A059;
-            cursor: pointer;
-            border-radius: 50%;
-        }
+        [x-cloak] { display: none !important; }
     </style>
 </head>
-<body class="bg-white text-[#1A252D] overflow-x-hidden">
+<body class="bg-white text-[#1A252D] antialiased">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-8 py-4">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 rounded-full bg-[#3A4E5D] flex items-center justify-center text-white font-black text-xs">GV</div>
-                <span class="font-black tracking-tighter text-[#3A4E5D] uppercase">Gather Vital</span>
+                <div class="w-8 h-8 rounded-lg bg-[#3A4E5D] flex items-center justify-center text-white font-black text-xs shadow-lg shadow-[#3A4E5D]/20">GV</div>
+                <span class="font-black tracking-tighter text-[#3A4E5D] uppercase text-sm">Gather Vital</span>
             </div>
-            <button class="bg-[#3A4E5D] text-white px-6 py-2 rounded font-bold text-xs uppercase tracking-widest hover:bg-[#C5A059] transition">Get License</button>
+            <a href="#pricing" class="bg-[#3A4E5D] text-white px-5 py-2 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#C5A059] transition shadow-lg shadow-[#3A4E5D]/10">Get Started</a>
         </div>
     </nav>
 
-    <header class="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-16 items-center">
+    <header class="max-w-7xl mx-auto px-8 py-20 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-            <div class="inline-block px-4 py-1 mb-6 border border-[#5DA399] text-[#5DA399] text-[10px] font-black uppercase tracking-[0.3em] rounded-full">Digital Sanctuary</div>
-            <h1 class="text-6xl md:text-8xl font-black leading-none text-[#3A4E5D] mb-8 uppercase tracking-tighter">
-                Own Your <br /> <span class="text-[#C5A059]">Ministry.</span>
+            <div class="inline-block px-4 py-1 mb-6 border border-[#5DA399] text-[#5DA399] text-[10px] font-black uppercase tracking-[0.3em] rounded-full">Church Sovereignty Platform</div>
+            <h1 class="text-6xl md:text-8xl font-black leading-[0.9] text-[#3A4E5D] mb-8 uppercase tracking-tighter">
+                Stop Renting Your <br /> <span class="text-[#C5A059]">Ministry.</span>
             </h1>
-            <p class="text-xl text-slate-600 mb-10 leading-relaxed">
-                Tired of <span class="font-bold text-[#3A4E5D]">endless subscriptions</span> where you never actually own your tools? Break the rental cycle and move your data into your own private vault.
+            <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-lg">
+                The big software companies treat your church like a subscription. We treat it like a sanctuary. Move your data into a vault <span class="font-bold text-[#3A4E5D]">you actually own.</span>
             </p>
-            <button class="bg-[#C5A059] text-white px-10 py-5 rounded-md font-black hover:scale-105 transition shadow-xl uppercase tracking-widest">Get Your License — $599</button>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#pricing" class="bg-[#C5A059] text-white px-8 py-4 rounded-lg font-black text-center hover:scale-105 transition shadow-2xl uppercase tracking-widest text-xs">Secure Your License</a>
+                <a href="#how-it-works" class="border-2 border-slate-200 text-slate-500 px-8 py-4 rounded-lg font-black text-center hover:bg-slate-50 transition uppercase tracking-widest text-xs">How it Works</a>
+            </div>
         </div>
-        <div class="bg-slate-100 rounded-3xl aspect-video flex items-center justify-center border-4 border-[#3A4E5D]/10">
-            <span class="text-slate-300 font-black uppercase italic">Dashboard Preview</span>
+        <div class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-[#C5A059]/20 to-[#5DA399]/20 rounded-[3rem] blur-2xl group-hover:blur-3xl transition duration-500"></div>
+            <div class="relative bg-slate-900 rounded-[2.5rem] aspect-video flex items-center justify-center border-8 border-white shadow-2xl overflow-hidden">
+                <div class="text-center">
+                    <div class="text-[#C5A059] text-5xl mb-4 italic font-black uppercase">Dashboard</div>
+                    <div class="text-slate-500 font-bold uppercase tracking-widest text-[10px]">Zero Monthly Fees. Pure Sovereignty.</div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <section class="bg-slate-900 py-24 text-white">
-        <div class="max-w-5xl mx-auto px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black uppercase tracking-tighter mb-4 text-[#C5A059]">The Stewardship Audit</h2>
-                <p class="text-slate-400">How much mission capital are you losing to the "Subscription Tax"?</p>
+    <section class="bg-slate-50 py-24 border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black uppercase tracking-tighter mb-4 text-[#3A4E5D]">The <span class="text-[#C5A059]">SaaS Tax</span> Is Killing Your Mission.</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed italic">
+                    By 2026, the average church of 300 spends over $4,000 every year just to keep their data in the cloud. That is capital that belongs in your community.
+                </p>
             </div>
 
-            <div class="bg-[#1A252D] rounded-[2rem] overflow-hidden border border-white/5 shadow-2xl">
-                <div class="grid md:grid-cols-2">
-                    <div class="p-12 border-r border-white/5">
-                        <div class="flex justify-between items-center mb-8">
-                            <span class="text-[10px] uppercase tracking-widest font-black text-slate-500">Years of Ministry</span>
-                            <span id="display-years" class="text-6xl font-black text-[#C5A059]">5</span>
+            <div class="bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden">
+                <div class="grid lg:grid-cols-5">
+                    <div class="lg:col-span-2 bg-[#3A4E5D] p-12 text-white">
+                        <h3 class="font-black uppercase tracking-widest text-[10px] mb-12 text-[#C5A059]">1. Adjust Your Timeline</h3>
+                        <div class="space-y-12">
+                            <div>
+                                <div class="flex justify-between items-center mb-6">
+                                    <label class="text-[10px] uppercase tracking-widest font-black text-slate-400 text-xs">Years of Ministry</label>
+                                    <span x-text="years" class="text-6xl font-black text-[#C5A059]"></span>
+                                </div>
+                                <input type="range" min="1" max="10" x-model="years" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-[#C5A059]">
+                            </div>
                         </div>
-                        <input type="range" id="calc-slider" min="1" max="10" value="5" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer">
-                        <p class="mt-12 text-sm text-slate-500 italic">By 2026, the average church of 300 spends over $3,500/year on modular ChMS subscriptions.</p>
                     </div>
-                    <div class="p-12 bg-black/20 text-center flex flex-col justify-center">
-                        <p class="text-[10px] uppercase font-black tracking-widest text-[#5DA399] mb-4">Potential Kingdom Savings</p>
-                        <div id="display-savings" class="text-7xl font-black text-white tracking-tighter">$16,141</div>
-                        <p class="text-[10px] text-slate-500 mt-4 uppercase">Versus the Industry Average</p>
+                    <div class="lg:col-span-3 p-12 bg-white">
+                        <div class="space-y-8 text-[#3A4E5D]">
+                            <div class="flex justify-between items-end border-b pb-4">
+                                <span class="font-black uppercase tracking-widest text-[10px]">Gather Vital (One-Time)</span>
+                                <span class="font-black text-[#5DA399] text-2xl">$599</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex justify-between text-xs font-bold uppercase">
+                                    <span class="text-slate-400">Industry Average</span>
+                                    <span x-text="'$' + (Math.round((pcoMonthly + ccbMonthly + tlyMonthly)/3 * 12 * years)).toLocaleString()"></span>
+                                </div>
+                                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-slate-300 h-full transition-all duration-500" :style="'width: ' + (years * 10) + '%'"></div>
+                                </div>
+                            </div>
+                            <div class="mt-12 p-8 bg-[#5DA399]/5 rounded-2xl border-2 border-dashed border-[#5DA399]/20 text-center">
+                                <p class="text-[10px] uppercase font-black tracking-widest text-[#3A4E5D] mb-2">Potential Kingdom Savings</p>
+                                <div x-text="'$' + (Math.round(((pcoMonthly + ccbMonthly + tlyMonthly)/3 * 12 * years) - gvCost)).toLocaleString()" class="text-6xl font-black text-[#5DA399] tracking-tighter"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 max-w-7xl mx-auto px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black uppercase text-[#3A4E5D]">3 Steps to Sovereignty</h2>
-        </div>
-        <div class="grid md:grid-cols-3 gap-12 text-center">
-            <div>
-                <div class="w-12 h-12 bg-[#5DA399] rounded-full flex items-center justify-center text-white font-black mx-auto mb-6">1</div>
-                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">Secure Your License</h3>
-                <p class="text-slate-500 text-sm">One-time payment. No monthly fees. Ever.</p>
+    <section id="how-it-works" class="py-24 max-w-7xl mx-auto px-8">
+        <div class="grid md:grid-cols-3 gap-16">
+            <div class="text-center group">
+                <div class="w-16 h-16 bg-[#3A4E5D] text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-8 transform group-hover:rotate-6 transition">01</div>
+                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">Secure the Key</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Pay once for your lifetime license. You get the code, the keys, and the sovereignty.</p>
             </div>
-            <div>
-                <div class="w-12 h-12 bg-[#5DA399] rounded-full flex items-center justify-center text-white font-black mx-auto mb-6">2</div>
-                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">Launch Your Vault</h3>
-                <p class="text-slate-500 text-sm">Deploy to your own Firebase instance in 10 minutes.</p>
+            <div class="text-center group">
+                <div class="w-16 h-16 bg-[#C5A059] text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-8 transform group-hover:-rotate-6 transition">02</div>
+                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">Setup & Migration</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">We handle the technical heavy lifting or guide you through a 10-minute Firebase setup.</p>
             </div>
-            <div>
-                <div class="w-12 h-12 bg-[#5DA399] rounded-full flex items-center justify-center text-white font-black mx-auto mb-6">3</div>
-                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">Focus on People</h3>
-                <p class="text-slate-500 text-sm">Put your savings back into your community mission.</p>
+            <div class="text-center group">
+                <div class="w-16 h-16 bg-[#5DA399] text-white rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-8 transform group-hover:rotate-6 transition">03</div>
+                <h3 class="font-black uppercase text-[#3A4E5D] mb-4">Mission First</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Reinvest your monthly 'savings' back into your children's ministry and local outreach.</p>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white border-t border-slate-100 py-12 text-center">
-        <p class="text-[10px] font-bold text-slate-300 uppercase tracking-[0.5em]">&copy; 2026 Gather Vital. Own Your Future.</p>
+    <section id="pricing" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black uppercase tracking-tighter mb-4">Pick Your <span class="text-[#C5A059]">Sovereignty Tier.</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                <div class="bg-[#1A252D] p-12 rounded-[2rem] border border-white/5 flex flex-col">
+                    <h3 class="text-[#C5A059] font-black uppercase tracking-widest text-xs mb-2">Self-Hosted Vault</h3>
+                    <div class="text-5xl font-black mb-8">$599 <span class="text-xs text-slate-500 uppercase">Once</span></div>
+                    <ul class="space-y-4 mb-12 flex-grow text-sm text-slate-300 font-medium">
+                        <li>✅ Full "Big Four" Suite (Giving, Groups, etc.)</li>
+                        <li>✅ Ownership of Database Keys</li>
+                        <li>✅ 24-Hour Setup Guide</li>
+                        <li>✅ Zero Monthly Fees Forever</li>
+                    </ul>
+                    <button class="w-full py-4 border-2 border-slate-700 rounded-lg font-black uppercase text-xs tracking-widest hover:bg-white hover:text-slate-900 transition">Get Started</button>
+                </div>
+                <div class="bg-[#3A4E5D] p-12 rounded-[2rem] border-4 border-[#C5A059] relative flex flex-col scale-105">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C5A059] px-4 py-1 rounded-full text-[9px] font-black uppercase tracking-widest">Most Popular</div>
+                    <h3 class="text-[#C5A059] font-black uppercase tracking-widest text-xs mb-2 text-white">The Concierge Experience</h3>
+                    <div class="text-5xl font-black mb-8">$999 <span class="text-xs text-slate-200 uppercase tracking-widest">Once</span></div>
+                    <ul class="space-y-4 mb-12 flex-grow text-sm font-medium">
+                        <li>✅ Everything in Self-Hosted</li>
+                        <li>✅ <span class="font-black">We Setup Everything for you</span></li>
+                        <li>✅ Data Migration (CSV Cleanup)</li>
+                        <li>✅ Custom Branded App Configuration</li>
+                        <li>✅ Tuesday "White Glove" Launch</li>
+                    </ul>
+                    <button class="w-full py-4 bg-[#C5A059] text-white rounded-lg font-black uppercase text-xs tracking-widest hover:bg-[#b08e4d] transition shadow-xl">Secure My Tuesday Window</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-black uppercase tracking-[0.4em] text-slate-300">
+            <p>&copy; 2026 Gather Vital</p>
+            <div class="flex space-x-8 mt-4 md:mt-0">
+                <a href="#" class="hover:text-[#3A4E5D] transition">Privacy</a>
+                <a href="#" class="hover:text-[#3A4E5D] transition">Sovereignty Charter</a>
+                <a href="#" class="hover:text-[#3A4E5D] transition">Contact</a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        const slider = document.getElementById('calc-slider');
-        const yearTxt = document.getElementById('display-years');
-        const saveTxt = document.getElementById('display-savings');
-
-        function update() {
-            const yrs = parseInt(slider.value);
-            yearTxt.innerText = yrs;
-            
-            // Math: (Avg ChMS $318/mo * 12 * years) - $599 GV Cost
-            const totalSaaS = 318 * 12 * yrs;
-            const savings = totalSaaS - 599;
-            
-            saveTxt.innerText = '$' + Math.max(0, savings).toLocaleString();
-        }
-
-        slider.addEventListener('input', update);
-        update();
-    </script>
 </body>
 </html>
