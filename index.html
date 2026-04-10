@@ -9,11 +9,21 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         [x-cloak] { display: none !important; }
+        .bg-gold { background-color: #C5A059; }
+        .text-gold { color: #C5A059; }
+        .bg-navy { background-color: #3A4E5D; }
+        .text-navy { color: #3A4E5D; }
     </style>
 </head>
 <body class="bg-white text-[#1A252D] antialiased">
+
+    <div class="bg-[#3A4E5D] text-[#C5A059] py-2.5 px-4 text-center border-b border-white/10">
+        <p class="text-[10px] font-black uppercase tracking-[0.3em]">
+            Now accepting applications for Summer 2026 Early Access • <a href="#waitlist" class="underline hover:text-white transition">Join the Waitlist</a>
+        </p>
+    </div>
 
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -21,22 +31,22 @@
                 <div class="w-8 h-8 rounded-lg bg-[#3A4E5D] flex items-center justify-center text-white font-black text-xs shadow-lg shadow-[#3A4E5D]/20">GV</div>
                 <span class="font-black tracking-tighter text-[#3A4E5D] uppercase text-sm">Gather Vital</span>
             </div>
-            <a href="#pricing" class="bg-[#3A4E5D] text-white px-5 py-2 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#C5A059] transition shadow-lg shadow-[#3A4E5D]/10">Get Started</a>
+            <a href="#waitlist" class="bg-[#3A4E5D] text-white px-5 py-2 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#C5A059] transition shadow-lg shadow-[#3A4E5D]/10">Join Waitlist</a>
         </div>
     </nav>
 
     <header class="max-w-7xl mx-auto px-8 py-20 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-            <div class="inline-block px-4 py-1 mb-6 border border-[#5DA399] text-[#5DA399] text-[10px] font-black uppercase tracking-[0.3em] rounded-full">Church Sovereignty Platform</div>
+            <div class="inline-block px-4 py-1 mb-6 border border-[#5DA399] text-[#5DA399] text-[10px] font-black uppercase tracking-[0.3em] rounded-full">Coming Summer 2026</div>
             <h1 class="text-6xl md:text-8xl font-black leading-[0.9] text-[#3A4E5D] mb-8 uppercase tracking-tighter">
                 Stop Renting Your <br /> <span class="text-[#C5A059]">Ministry.</span>
             </h1>
             <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-lg">
-                The big software companies treat your church like a monthly subscription. We treat it like a sanctuary. Move your data into a vault <span class="font-bold text-[#3A4E5D]">you actually own.</span>
+                The big software companies treat your church like a monthly subscription. We treat it like a sanctuary. Join the waitlist for the only vault <span class="font-bold text-[#3A4E5D]">you actually own.</span>
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#pricing" class="bg-[#C5A059] text-white px-8 py-4 rounded-lg font-black text-center hover:scale-105 transition shadow-2xl uppercase tracking-widest text-xs">Secure Your License</a>
-                <a href="#guide" class="border-2 border-slate-200 text-slate-500 px-8 py-4 rounded-lg font-black text-center hover:bg-slate-50 transition uppercase tracking-widest text-xs">The Founder's Story</a>
+                <a href="#waitlist" class="bg-[#C5A059] text-white px-8 py-4 rounded-lg font-black text-center hover:scale-105 transition shadow-2xl uppercase tracking-widest text-xs">Join the Waitlist</a>
+                <a href="#guide" class="border-2 border-slate-200 text-slate-500 px-8 py-4 rounded-lg font-black text-center hover:bg-slate-50 transition uppercase tracking-widest text-xs">Our Story</a>
             </div>
         </div>
         <div class="relative group">
@@ -88,7 +98,7 @@
                             <span x-text="years" class="text-6xl font-black text-[#C5A059]"></span>
                         </div>
                         <input type="range" min="1" max="10" x-model="years" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-[#C5A059]">
-                        <p class="text-[10px] text-slate-400 mt-8 uppercase tracking-[0.2em]">Based on individual church impact</p>
+                        <p class="text-[10px] text-slate-400 mt-8 uppercase tracking-[0.2em]">Individual church impact</p>
                     </div>
                     <div class="lg:col-span-3 p-12">
                         <div class="flex justify-between items-end border-b pb-4 mb-8">
@@ -98,7 +108,7 @@
                         <div class="mt-8 p-8 bg-red-50 rounded-2xl border-2 border-dashed border-red-200 text-center">
                             <p class="text-[10px] uppercase font-black tracking-widest text-red-600 mb-2">Total Subscription Tax Lost</p>
                             <div x-text="'$' + (Math.round((avgMonthly * 12 * years) - gvCost)).toLocaleString()" class="text-6xl md:text-8xl font-black text-red-600 tracking-tighter mb-2"></div>
-                            <p class="text-xs font-bold text-red-800/60 uppercase tracking-widest">Your church loses <span x-text="'$' + (avgMonthly * 12).toLocaleString()"></span> every single year</p>
+                            <p class="text-xs font-bold text-red-800/60 uppercase tracking-widest italic">Your church loses <span x-text="'$' + (avgMonthly * 12).toLocaleString()"></span> every single year</p>
                         </div>
                     </div>
                 </div>
@@ -143,26 +153,26 @@
                 <div class="bg-[#1A252D] p-10 rounded-[2rem] border border-white/5 flex flex-col">
                     <h3 class="text-[#C5A059] font-black uppercase tracking-widest text-[10px] mb-2">Individual Church</h3>
                     <div class="text-4xl font-black mb-6">$599 <span class="text-[10px] text-slate-500 uppercase tracking-widest">Once</span></div>
-                    <ul class="space-y-4 mb-10 flex-grow text-xs text-slate-400">
+                    <ul class="space-y-4 mb-10 flex-grow text-xs text-slate-400 font-medium">
                         <li>✅ Full CRM, Giving, & Worship Builder</li>
                         <li>✅ Ownership of Database Keys</li>
                         <li>✅ Digital Setup Guide</li>
                         <li>✅ Zero Monthly Fees</li>
                     </ul>
-                    <button class="w-full py-4 border border-slate-700 rounded-lg font-black uppercase text-[10px] tracking-widest hover:bg-white hover:text-slate-900 transition">Get Started</button>
+                    <a href="#waitlist" class="w-full py-4 border border-slate-700 rounded-lg font-black uppercase text-[10px] tracking-widest text-center hover:bg-white hover:text-slate-900 transition">Get Early Access</a>
                 </div>
                 <div class="bg-[#3A4E5D] p-10 rounded-[2.5rem] border-4 border-[#C5A059] relative flex flex-col lg:scale-110 shadow-2xl z-10">
                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C5A059] px-4 py-1 rounded-full text-[8px] font-black uppercase tracking-widest">Recommended</div>
                     <h3 class="text-white font-black uppercase tracking-widest text-[10px] mb-2 text-center">Tuesday Concierge</h3>
                     <div class="text-4xl font-black mb-6 text-center">$999 <span class="text-[10px] text-slate-300 uppercase tracking-widest">Once</span></div>
-                    <p class="text-[9px] text-slate-200 mb-6 font-bold uppercase italic tracking-tighter leading-tight text-center">Full data migration and setup by our team.</p>
+                    <p class="text-[9px] text-slate-200 mb-6 font-bold uppercase italic tracking-tighter leading-tight text-center">Full migration and setup by our team.</p>
                     <ul class="space-y-4 mb-10 flex-grow text-xs">
-                        <li>✅ Everything in Self-Hosted</li>
+                        <li>✅ Everything in Individual Church</li>
                         <li>✅ <span class="font-black">We Setup Everything For You</span></li>
                         <li>✅ CSV Data Cleanup & Migration</li>
                         <li>✅ Branded Kiosk Configuration</li>
                     </ul>
-                    <button class="w-full py-4 bg-[#C5A059] text-white rounded-lg font-black uppercase text-[10px] tracking-widest hover:bg-[#b08e4d] transition shadow-xl">Secure My Tuesday</button>
+                    <a href="#waitlist" class="w-full py-4 bg-[#C5A059] text-white rounded-lg font-black uppercase text-[10px] tracking-widest text-center hover:bg-[#b08e4d] transition shadow-xl">Join Waitlist</a>
                 </div>
                 <div class="bg-[#1A252D] p-10 rounded-[2rem] border border-white/5 flex flex-col">
                     <h3 class="text-[#5DA399] font-black uppercase tracking-widest text-[10px] mb-2">Kingdom Network</h3>
@@ -174,7 +184,7 @@
                         <li>✅ Multi-Site Data Governance</li>
                         <li>✅ Custom Network Roadmap</li>
                     </ul>
-                    <button class="w-full py-4 border border-slate-700 rounded-lg font-black uppercase text-[10px] tracking-widest hover:border-[#5DA399] hover:text-[#5DA399] transition">Contact Leaders</button>
+                    <a href="#waitlist" class="w-full py-4 border border-slate-700 rounded-lg font-black uppercase text-[10px] tracking-widest text-center hover:border-[#5DA399] hover:text-[#5DA399] transition">Request Access</a>
                 </div>
             </div>
         </div>
@@ -189,16 +199,54 @@
         </div>
     </section>
 
-    <footer class="bg-white border-t border-slate-100 py-20">
-        <div class="max-w-4xl mx-auto px-8 text-center">
-            <h3 class="text-[#3A4E5D] font-black uppercase tracking-tighter text-2xl mb-4">Not ready to switch?</h3>
-            <p class="text-slate-500 mb-8">Get the <strong>Church Data Sovereignty Checklist</strong>. Learn how to move your records without losing a single member.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <input type="email" placeholder="Enter your email" class="px-6 py-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#5DA399] min-w-[300px]">
-                <button class="bg-[#3A4E5D] text-white px-8 py-4 rounded-lg font-black uppercase tracking-widest text-xs hover:bg-[#1A252D] transition">Send Me the Guide</button>
+    <footer id="waitlist" class="bg-white border-t border-slate-100 py-20">
+        <div class="max-w-4xl mx-auto px-8 text-center" x-data="{ success: false }">
+            
+            <div x-show="!success">
+                <h3 class="text-[#3A4E5D] font-black uppercase tracking-tighter text-3xl mb-4">Secure Your Spot in the Vault.</h3>
+                <p class="text-slate-500 mb-8 max-w-xl mx-auto leading-relaxed text-sm">
+                    We are launching Gather Vital in small waves to ensure every church gets a white-glove migration. Join the waitlist to be notified when the next license window opens.
+                </p>
+
+                <form 
+                    action="https://app.loops.so/api/newsletter-form/cmnt0z7us00cj0i212jyiftav" 
+                    method="POST" 
+                    @submit.prevent="
+                        const formData = new FormData($el);
+                        fetch($el.action, { 
+                            method: 'POST', 
+                            body: new URLSearchParams(formData) 
+                        }).then(res => { if(res.ok) success = true; })
+                    "
+                    class="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+                >
+                    <input 
+                        type="email" 
+                        name="newsletter-form-input" 
+                        required 
+                        placeholder="Enter your ministry email" 
+                        class="px-6 py-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#5DA399] min-w-[300px] text-slate-700 font-medium"
+                    >
+                    <button 
+                        type="submit" 
+                        class="bg-[#3A4E5D] text-white px-8 py-4 rounded-lg font-black uppercase tracking-widest text-[10px] hover:bg-[#1A252D] transition shadow-lg"
+                    >
+                        Request Access
+                    </button>
+                </form>
             </div>
-            <div class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-300">
-                &copy; 2026 Gather Vital | Built for the Kingdom
+
+            <div x-show="success" x-cloak class="py-12 bg-[#5DA399]/10 rounded-[2rem] border-2 border-dashed border-[#5DA399]/30 max-w-2xl mx-auto">
+                <div class="text-4xl mb-4">📩</div>
+                <h3 class="text-[#3A4E5D] font-black uppercase tracking-tighter text-2xl mb-2 text-navy">You're on the list.</h3>
+                <p class="text-slate-500 font-medium text-sm">Check your inbox. Your Sovereignty Checklist is on the way.</p>
+            </div>
+
+            <div class="flex flex-col items-center mt-20 opacity-30">
+                <div class="w-6 h-6 rounded bg-[#3A4E5D] flex items-center justify-center text-white font-black text-[8px] mb-4">GV</div>
+                <div class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">
+                    &copy; 2026 Gather Vital | Built for the Kingdom
+                </div>
             </div>
         </div>
     </footer>
